@@ -1,6 +1,6 @@
 # 🤖 The 100 Bilboard List in Spotify
 
-Un script que crea una lista de Spotify con las 100 canciones más populares de la lista de [Bilboard](https://www.billboard.com/charts/hot-100/)usando como parámetro una fecha dada.
+Un script que crea una lista de Spotify con las 100 canciones más populares de la lista de [Bilboard](https://www.billboard.com/charts/hot-100/) usando como parámetro una fecha dada.
 
 ## 🚀 ¿Como usar?
 
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 ### 2. Conecta la aplicación con Spotify
 
-Ahora es necesario conectar nuestro script con Spotify para que este pueda hacer uso de la API de Spotify , para eso debes dirigirte al siguiente link e iniciar session con tu cuenta de Spotify:
+Ahora es necesario conectar nuestro script con Spotify para que este pueda hacer uso de la API de Spotify, para eso debes dirigirte al siguiente link e iniciar sesión con tu cuenta de Spotify:
 
 ```text
 https://developer.spotify.com/dashboard/applications
@@ -66,7 +66,7 @@ Deberías de encontrarte con una página similar a esta
 
 ![Developers Dashboard](images/developers-dasboard.png)
 
-Debes dar clic en el botón que dice "CREATE AN APP" e ingresar los datos que te piden, así como aceptar los términos de Spotify,una vez finalizado das clic en el botón de "CREATE" para crear tu APP
+Debes dar clic en el botón que dice "CREATE AN APP" e ingresar los datos que te piden, así como aceptar los términos de Spotify, una vez finalizado das clic en el botón de "CREATE" para crear tu APP
 
 ![Creating App](images/creating-app.png)
 
@@ -78,14 +78,14 @@ Al dar clic en el botón de "SHOW CLIENT SECRET" deberías de poder ver un párr
 
 ![Client Secret](images/client-secret.png)
 
-Dentro del repositorio debes crear un archivo .env en donde tienes que agregar el client ID y el client secret, el archivo .env.example tiene un ejemplo de como debería de quedar el archivo final, pero más o menos sería algo asi:
+Dentro del repositorio debes crear un archivo .env en donde tienes que agregar el client ID y el client secret, el archivo .env.example tiene un ejemplo de como debería de quedar el archivo final, pero más o menos sería algo asi
 
 ```text
 SECRET_ID=0d30fcf4ad4842dd8cf23673b9b392d7
 SECRET_CLIENT=260a41d8cd6b48e6a5e3de6aa9df3f23
 ```
 
-Lo último que debes hacer es dar clic en el botón de "EDIT SETTINGS" una vez ahí en la sección de Redirect URIs debes agregar la siguiente URL:
+Lo último que debes hacer es dar clic en el botón de "EDIT SETTINGS" una vez ahí en la sección de Redirect URIs debes agregar la siguiente URL
 
 ```text
 https://www.spotify.com/mx/
@@ -105,7 +105,7 @@ Lo único que queda por hacer es correr el script e iniciar sesión con una cuen
 python3 ./main.py
 ```
 
-El script me redirigirá a la página de inicio de sesión de Spotify y una vez iniciada la sesión, el script pedirá autorizar permisos para que el script acceda a la información de la cuenta
+El script te redirigirá a la página de inicio de sesión de Spotify y una vez iniciada la sesión, el script pedirá autorizar permisos para que el script acceda a la información de la cuenta
 
 ![Authorize Account](images/aut-o-spotify.png)
 
@@ -113,7 +113,7 @@ Una vez que realizamos la autenticación se nos redirige a la página de Spotify
 
 ![Redirect Link](images/redirect-link.png)
 
-Ahora el script nos pedirá que ingresemos una fecha iniciando por el año, seguido del mes y después el día el script ira a la página de [Bilboard](https://www.billboard.com/charts/hot-100/) y buscara las 100 canciones más populares en la fecha que ingresaste, una vez realizado creara una lista de Spotify con dichas canciones
+Ahora el script nos pedirá que ingresemos una fecha iniciando por el año, seguido del mes y después el día, el script ira a la página de [Bilboard](https://www.billboard.com/charts/hot-100/) y buscara las 100 canciones más populares en la fecha que ingresaste, una vez realizado creara una lista de Spotify con dichas canciones
 
 ![Final Output](images/enter-date.png)
 

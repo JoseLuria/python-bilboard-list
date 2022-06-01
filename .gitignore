@@ -1,0 +1,7 @@
+venv
+.env
+.cache
+token.txt
+songs.json
+.idea
+__pycache__

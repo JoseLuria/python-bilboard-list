@@ -1,8 +1,6 @@
 # 🤖 The 100 Bilboard List in Spotify
 
-Un script que crea una lista de Spotify con las 100 canciones 
-más populares de la lista de [Bilboard](https://www.billboard.com/charts/hot-100/)
-usando como parámetro una fecha dada.
+Un script que crea una lista de Spotify con las 100 canciones más populares de la lista de [Bilboard](https://www.billboard.com/charts/hot-100/)usando como parámetro una fecha dada.
 
 ## 🚀 ¿Como usar?
 
@@ -13,21 +11,17 @@ usando como parámetro una fecha dada.
 Primero debes clonar el repositorio usando Github
 
 ```commandline
-git clone 
+git clone https://github.com/JoseLuria/python-bilboard-list.git
 ```
 
 #### Entra al repositorio y crea un entorno virtual
 
-Después debes entrar a la carpeta del repositorio y crear un entorno virtual en donde estarán instaladas 
-las dependencias para que el script funcione, el comando para 
-crear el entorno virtual puede variar dependiendo del sistema 
-operativo, puedes obtener más información sobre como crear el 
-entorno virtual en la [documentación oficial](https://docs.python.org/es/3/library/venv.html)
+Después debes entrar a la carpeta del repositorio y crear un entorno virtual en donde estarán instaladas las dependencias para que el script funcione, el comando para crear el entorno virtual puede variar dependiendo del sistema operativo, puedes obtener más información sobre como crear el entorno virtual en la [documentación oficial](https://docs.python.org/es/3/library/venv.html)
 
 Entra a la carpeta del repositorio
 
 ```commandline
-cd 
+cd python-bilboard-list/
 ```
 
 En el ejemplo estoy usando el comando para sistemas basados en UNIX (Mac Os y Linux)
@@ -38,10 +32,7 @@ python3 -m venv venv
 
 #### Activa el entorno virtual
 
-El comando para crear el entorno virtual puede variar dependiendo 
-de la shell que uses, de igual manera puedes encontrar más 
-información sobre como activar el entorno virtual en 
-la [documentación oficial](https://docs.python.org/es/3/library/venv.html)
+El comando para crear el entorno virtual puede variar dependiendo de la shell que uses, de igual manera puedes encontrar más información sobre como activar el entorno virtual en la [documentación oficial](https://docs.python.org/es/3/library/venv.html)
 
 En el ejemplo estoy usando el comando para la shell de bash/zsh
 
@@ -57,11 +48,7 @@ deactivate
 
 #### Instala las dependencias usando pip
 
-Lo último que queda es instalar las dependencias necesarias 
-usando el comando pip install con el parámetro -r de read(leer) 
-y señalando el archivo que queremos que lea, en este caso será el 
-archivo requirements.txt en donde se encuentra la lista de 
-dependencias necesarias con sus respectivas versiones
+Lo último que queda es instalar las dependencias necesarias usando el comando pip install con el parámetro -r de read(leer) y señalando el archivo que queremos que lea, en este caso será el archivo requirements.txt en donde se encuentra la lista de dependencias necesarias con sus respectivas versiones
 
 ```commandline
 pip install -r requirements.txt
@@ -69,11 +56,7 @@ pip install -r requirements.txt
 
 ### 2. Conecta la aplicación con Spotify
 
-Ahora es necesario conectar nuestro script con Spotify para 
-que este pueda hacer uso de la API de Spotify 
-
-Para eso debes dirigirte al siguiente link e iniciar session 
-con tu cuenta de Spotify:
+Ahora es necesario conectar nuestro script con Spotify para que este pueda hacer uso de la API de Spotify , para eso debes dirigirte al siguiente link e iniciar session con tu cuenta de Spotify:
 
 ```text
 https://developer.spotify.com/dashboard/applications
@@ -83,10 +66,7 @@ Deberías de encontrarte con una página similar a esta
 
 ![Developers Dashboard](images/developers-dasboard.png)
 
-Debes dar clic en el botón que dice "CREATE AN APP" e ingresar 
-los datos que te piden, así como aceptar los términos de Spotify,
-una vez finalizado das clic en el botón de "CREATE" para 
-crear tu APP
+Debes dar clic en el botón que dice "CREATE AN APP" e ingresar los datos que te piden, así como aceptar los términos de Spotify,una vez finalizado das clic en el botón de "CREATE" para crear tu APP
 
 ![Creating App](images/creating-app.png)
 
@@ -94,25 +74,18 @@ Tras haber creado la aplicación deberías de ser redirigido a una página como 
 
 ![App Dashboard](images/app-dashboard.png)
 
-Al dar clic en el botón de "SHOW CLIENT SECRET" deberías de poder 
-ver un párrafo que contiene el client secret. Lo siguiente que 
-debes de hacer es copiar el client ID y el cliente secret
+Al dar clic en el botón de "SHOW CLIENT SECRET" deberías de poder ver un párrafo que contiene el client secret. Lo siguiente que debes de hacer es copiar el client ID y el cliente secret
 
 ![Client Secret](images/client-secret.png)
 
-Dentro del repositorio debes crear un archivo .env en donde 
-tienes que agregar el client ID y el client secret, 
-el archivo .env.example tiene un ejemplo de como debería de 
-quedar el archivo final, pero más o menos sería algo asi:
+Dentro del repositorio debes crear un archivo .env en donde tienes que agregar el client ID y el client secret, el archivo .env.example tiene un ejemplo de como debería de quedar el archivo final, pero más o menos sería algo asi:
 
 ```text
 SECRET_ID=0d30fcf4ad4842dd8cf23673b9b392d7
 SECRET_CLIENT=260a41d8cd6b48e6a5e3de6aa9df3f23
 ```
 
-Lo último que debes hacer es dar clic en el botón de "EDIT SETTINGS" 
-una vez ahí en la sección de Redirect URIs debes agregar la 
-siguiente URL:
+Lo último que debes hacer es dar clic en el botón de "EDIT SETTINGS" una vez ahí en la sección de Redirect URIs debes agregar la siguiente URL:
 
 ```text
 https://www.spotify.com/mx/
@@ -132,27 +105,19 @@ Lo único que queda por hacer es correr el script e iniciar sesión con una cuen
 python3 ./main.py
 ```
 
-El script me redirigirá a la página de inicio de sesión de Spotify y una vez 
-iniciada la sesión, el script pedirá autorizar permisos para que el script acceda 
-a la información de la cuenta
+El script me redirigirá a la página de inicio de sesión de Spotify y una vez iniciada la sesión, el script pedirá autorizar permisos para que el script acceda a la información de la cuenta
 
 ![Authorize Account](images/aut-o-spotify.png)
 
-Una vez que realizamos la autenticación se nos redirige a la página de Spotify, ahí debemos 
-de copiar el link de la página y pegarlo en la consola
+Una vez que realizamos la autenticación se nos redirige a la página de Spotify, ahí debemos de copiar el link de la página y pegarlo en la consola
 
 ![Redirect Link](images/redirect-link.png)
 
-Ahora el script nos pedirá que ingresemos una fecha iniciando por el año, seguido del mes y 
-después el día el script ira a la página de [Bilboard](https://www.billboard.com/charts/hot-100/) 
-y buscara las 100 canciones más populares en la fecha que ingresaste, 
-una vez realizado creara una lista de Spotify con dichas canciones
+Ahora el script nos pedirá que ingresemos una fecha iniciando por el año, seguido del mes y después el día el script ira a la página de [Bilboard](https://www.billboard.com/charts/hot-100/) y buscara las 100 canciones más populares en la fecha que ingresaste, una vez realizado creara una lista de Spotify con dichas canciones
 
 ![Final Output](images/enter-date.png)
 
-El script te mostrara una lista con las canciones que no hayan podido ser encontradas en Spotify, 
-de igual manera se creara un archivo llamado songs.json que incluirá el nombre de la canción, el nombre 
-del artista y el uri de Spotify en caso de que la canción no este en Spotify el uri será igual a null
+El script te mostrara una lista con las canciones que no hayan podido ser encontradas en Spotify, de igual manera se creara un archivo llamado songs.json que incluirá el nombre de la canción, el nombre del artista y el uri de Spotify en caso de que la canción no este en Spotify el uri será igual a null
 
 El archivo songs.json debería verse así
 
